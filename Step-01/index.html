@@ -7,7 +7,7 @@
     <title>Basics of HTML</title>
 </head>
 <body>
-
+<main>
     <h1>Types of Elements</h1>
     <ul>
         <li><b>Inline</b>
@@ -51,5 +51,104 @@
     <p>As a developer, you may want to document your code, so that you can easily refer to it in the future</p>
     <p>For this, comments are used.</p>
     <pre> <b>Sytanx:</b> <code>&lt;!-- this line is commendted --&gt;</code></pre>
+
+    <h1>Metadata Tag</h1>
+    <ul>
+        <li>The title element can also be considered as part of the metadata</li>
+        <li>Any web page should have only one title tag per page</li>
+        <li>The title should be unique for each web page in the application</li>
+        <li>The title is usually used to describe the current page</li>
+        <li><b>Example</b></li>
+        <li>Below line of code in the web app update browser to load page required resources from 2 origins by specifying values to
+        default-src as:</li>
+        <li> &lt; meta http-equiv="content-security-policy" content="default-src 'self' http: //xyz.com"&gt;
+</li>
+<li>&lt; meta name="viewport" content="width=deivce-width, initial-scale=1.0"&gt;</li>
+    <li>
+        <!-- <title>Meta tag example</title> -->
+        
+        <!-- Specifies the character encoding for the document. -->
+        <!-- ISO-8859-1 -->
+        <meta charset="utf-8">
+        
+        <meta name="author" content="Susan">
+        <meta name="description" content="This is a sample demo to understand HTML.">
+        
+        <!-- A web app wants to allow content from a current domain and truste domain xyz 
+            and all its subdomains -->
+        <meta http-equiv="content-security-policy" content="default-src 'self' http://xyz.com">
+        
+        <!-- Specify the preferred style sheet to use.-->
+        <meta http-equiv="default-style" content="/style.css">
+        
+        <!-- page content display to be adjusted to the device width being used to view the content with initial zoom level as 100% -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </li>
+    <li><b>Article</b></li>
+    <li><article>
+        <h1>MEAN stack</h1>
+        <p>MEAN stack training includes discussion on MongoDB, Node,
+            Express and Angular with the corresponding certifications</p>
+            <aside>
+                <p>Visit our official website to attempt our certifications</p>
+            </aside>
+        </arcicle>
+        <li><b>Address</b></li>
+        <li><address>
+            John
+            #231A
+            Palace Lane
+            Bangalore
+        </address></li>
+</li>
+
+
+</ul>
+
+<article>
+    <section>HTML list come in three basic falvours</section>
+    <ul>
+        <li>Unorderd List</li>
+    </ul>
+    <ol>
+        <li>Ordered List</li>
+    </ol>
+    <h2> Description List</h2>
+    <dl>
+        <dt><b>The God of Small Things</b></dt>
+        <dd>the story is authoried by Arunthati Ry and is set in Kerala and resolve around the lives of two children Rahel and Esthepa and how they weave and imagine their childhood experiences</dd>
+        
+    </dl>
+</article>
+
+
+<hr>
+<section>
+    <h2> Quotations and Citation Element </h2>
+    <blockquote cite="https://owasp.org/">
+        The Open Web Application Security Project® (OWASP) is a nonprofit foundation that works to improve the security of software.
+    </blockquote>
+</section>
+
+
+
+<hr>
+<section>
+    <nav> Login | SignUp | Trak order</nav> 
+    <h1>Welcome to Hussian's Shopping </h1> 
+    <nav> Clothing | Media</nav> 
+    <p>Hussain's very own one-stop solution for all your shopping needs ! Dont believe us? Click on the offers and check it out for yourself !!</p> 
+    
+     <h2>Clothing</h2> 
+     <h2>Media </h2>
+     </section>
+     <footer>
+        <nav>About Us | Privacy Policy |Contact Us | FAQ | Terms & Conditions</nav>
+        <p> Copyright 2018 | Giri </p>
+        <p>Like and Connect with us FB Twitter g+</p>
+        
+     </footer>
+      
+</main>
 </body>
 </html>
