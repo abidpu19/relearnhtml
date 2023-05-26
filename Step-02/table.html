@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-size: 1.2rem;
+      }
+    </style>
+    <title>Table Elements</title>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>
+          Table element defined in HTML using &lt;table &gt; ... &lt;/table&gt;
+        </h1>
+        <ul>
+          Following Elements are used within the table Element
+          <li>Caption:define table heading</li>
+          <li>tr:table row</li>
+          <li>th:table heading</li>
+          <li>td: table data</li>
+          <li>thead: table header</li>
+          <li>tbody: table body</li>
+          <li>colgroup: logically group two or more consective columns</li>
+        </ul>
+      </section>
+    </article>
+    <section>
+      <table>
+        <caption>
+          Table heading
+        </caption>
+        <thead>
+          <tr>
+            <th>Column 1 heading</th>
+            <th>Column 2 Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Column 1 data</td>
+            <td>Column 2 data</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <h2>Creating table element</h2>
+    <table>
+      <caption>
+        MERN stack developer program
+      </caption>
+      <colgroup>
+        <col />
+        <col style="background-color: lightblue" />
+        <col span="2" style="background-color: lightgreen" />
+        <col style="background-color: lightpink" />
+      </colgroup>
+      <tr>
+        <th>Technology</th>
+        <td>MongoDB</td>
+        <td>Node</td>
+        <td>Express</td>
+        <td>React</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>The database</td>
+        <td>Node is the base for server side scripting</td>
+        <td>JS framework for web server development</td>
+        <td>JS library to design the front end</td>
+      </tr>
+    </table>
+    <h2>List Available Proudcts List</h2>
+    <table border="1">
+      <caption>
+        Mobile Inventories Available at Hussain's Shopping!
+      </caption>
+      <thead>
+        <tr>
+          <th rowspan="2" scope="col">Product Name</th>
+          <th colspan="2">Product Details</th>
+        </tr>
+        <tr>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Asus Zenfone</td>
+          <td>11599</td>
+          <td>an economical phone by Asus</td>
+        </tr>
+        <tr>
+          <td>Redmi Note 2</td>
+          <td>8599</td>
+          <td>an economical phone by Xiaomi</td>
+        </tr>
+
+        <tr>
+          <td>Moto G trubo</td>
+          <td>8599</td>
+          <td>an economical phone by Moto</td>
+        </tr>
+        <tr>
+          <td>Lenovo vibe X3</td>
+          <td>1999</td>
+          <td>an economical phone by :enovo</td>
+        </tr>
+        <tr>
+          <td>iPhone 8 Plus</td>
+          <td>29999</td>
+          <td>an economical phone by Apple</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
