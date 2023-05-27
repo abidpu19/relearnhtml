@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Elements - Need</title>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2>Form Elements</h2>
+        <ul>
+          <li>Form can created using &lt; form &gt; &lt; /form &gt;</li>
+          <li>
+            &lt; form &gt; has below attributes
+            <ul>
+              <li>Method: get, post</li>
+              <li>Action: url for submission of data</li>
+              <li>
+                Target: Specifies if the submitted result will open in the
+                current window, a new tab, or on a new frame
+              </li>
+              <li>Enctype: multipart/form-data</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <div>
+      <form>
+        <h4>Register for Online Trainings</h4>
+
+        <!-- input fields types text/password/email/number  -->
+        Email:<input type="email" /> <br />
+        Username:<input type="text" /> <br />
+        Password:<input type="password" /> <br />
+        Contact:<input type="number" /> <br /><br />
+
+        <!-- input fields type checkbox -->
+        Select technologies needed:
+        <input type="checkbox" value="HTML" checked /> HTML
+        <input type="checkbox" value="CSS" /> CSS
+        <input type="checkbox" value="JS" /> JS<br /><br />
+
+        <!-- input field type radio button -->
+        Select training mode:
+        <input type="radio" name="training" value="classroom" checked />
+        Classroom <input type="radio" name="training" value="VCR" /> VCR <br />
+
+        <!-- input field type hidden -->
+        <input type="hidden" name="language" value="english" /> <br /><br />
+
+        Enter the URL of the certified training if any: <input type="url" />
+        <br />
+        <br />
+        Attach E-Certificate: <input type="file" /> <br />
+        <br />
+
+        <!-- input textarea type submit -->
+        Description:<br />
+        <textarea
+          name="details"
+          id="description"
+          cols="60"
+          rows="5"
+          placeholder="Please include addational information here..."></textarea>
+        <br />
+        <br />
+        <!-- input field type button -->
+        <input
+          type="button"
+          value="Click here to see the available trainings" />
+        &nbsp;&nbsp; <input type="reset" value="Reset" /> &nbsp;&nbsp;
+        <!-- input field type submit -->
+        <input type="submit" /> &nbsp;&nbsp;
+      </form>
+    </div>
+
+    <div>
+      <h2>Color Picker</h2>
+      Please Select color: <input type="color" />
+      <h2>Date Time picker</h2>
+      Choose date and time : <input type="datetime-local" />
+      <h2>Week picker</h2>
+      Choose date and time : <input type="week" />
+      <h2>Month picker</h2>
+      Choose date and time : <input type="month" />
+    </div>
+    <div>
+      <h3>Select</h3>
+      Country code:
+      <select>
+        <option value="">-- Please choose a country code --</option>
+        <option value="+213">+213</option>
+        <option value="+91">+91</option>
+        <option value="+244">+244</option>
+        <option value="+61">+61</option>
+        <option value="+973">+973</option>
+      </select>
+    </div>
+    <div>
+      <h2>Datalist</h2>
+      Select Country:<input list="countries" />
+      <datalist id="countries">
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Anguilla">Anguilla</option>
+        <option value="Antarctica">Antarctica</option>
+        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Aruba">Aruba</option>
+      </datalist>
+    </div>
+
+    <div>
+      <h2>Displays the output of user input.</h2>
+      <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="b" name="b" value="10" /> +
+        <input type="number" id="a" name="a" value="10" /> =
+        <output name="result" for="a b">20</output>
+      </form>
+    </div>
+
+    <div>
+      <form>
+        <h4>Slider Form Elements</h4>
+        <!-- input type range -->
+        Rate your experience:<input type="range" /> <br />
+        <br />
+
+        <!-- meter used to represent a gauge or to represent a measurement in a known scal -->
+        Time consumed for the training:
+        <meter min="0" max="100" value="50">50 of 100</meter> <br />
+        <br />
+
+        <!-- Progress can be used to mark up the completion rate/degree of progress of an "in progress" task through a progress bar. -->
+        Completion of the course:
+        <progress min="0" max="100" value="50">50 of 100</progress> <br />
+        <br />
+      </form>
+    </div>
+    <div>
+      <form oninput="O1.value = parseInt(R1.value)">
+        Rate your experience:<input
+          type="range"
+          id="R1"
+          min="0"
+          max="100"
+          step="10" />
+        <output for="R1" id="O1"></output>
+      </form>
+    </div>
+
+    <div>
+      <header>
+        <h1>Sign Up!</h1>
+      </header>
+
+      <article>
+        <!-- Add form here-->
+        <form>
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Please Enter Username" />
+          <br />
+          <br />
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Please Enter password" />
+          <br />
+          <br />
+          Gender:
+          <input type="radio" name="gender" value="male" checked />
+          Male <input type="radio" name="gender" value="female" /> Female <br />
+          DOB: <input type="date" />
+          <br />
+
+          Phone No: <input type="tel" />
+          <br />
+          Email Id: <input type="email" />
+          <br />
+          Languages Known:
+          <input type="checkbox" value="english" checked /> English
+          <input type="checkbox" value="hindi" /> Hindi
+          <input type="checkbox" value="french" /> French<br /><br />
+
+          Profile Picture: <input type="file" />
+          <br />
+          <input type="button" value="Register" />
+
+          <input type="reset" value="Reset" />
+        </form>
+
+        <br />
+        <br />
+      </article>
+    </div>
+    <article>
+      <h2>Rate your shopping experience:</h2>
+
+      <form
+        oninput="M1.value = parseInt(R1.value);M2.value = parseInt(R2.value);M3.value = parseInt(R3.value);M4.value = parseInt(R4.value);">
+        Delivery of product on time :<input type="range" id="R1" />
+        <meter id="M1"></meter> <br />
+        <br />
+        Product quality : <input type="range" id="R2" />
+        <meter id="M2"></meter>60 of 100 <br />
+        <br />
+        How friendly the site is :<input type="range" id="R3" />
+        <meter id="M3"></meter>20 of 100 <br />
+        <br />
+        Were you able to find the product which you were looking for?:
+        <input type="range" id="R4" /> <meter id="M4"></meter><br /><br />
+      </form>
+    </article>
+
+    <form method="GET" novalidate>
+      <h4>Register Here to Get Job Offer Notifications</h4>
+      Username:<input type="text" pattern="[A-Za-z]" autocomplete required />
+      <br /><br />
+      Password:<input type="password" required /> <br /><br />
+      Email ID:<input type="email" required /> <br /><br />
+      Contact:<input
+        type="number"
+        placeholder="Enter your contact number here"
+        autofocus />
+      <br /><br />
+      Job Experience:
+      <input type="number" min="2" max="10" step="0.5" /><br /><br />
+      Certificates:<input type="file" multiple required /><br /><br />
+      <input name="language" type="text" value="English" hidden />
+      <input type="submit" formmethod="POST" /><br />
+    </form>
+
+    <header>
+      <h1>Sign Up!</h1>
+    </header>
+    <article>
+      <form action="success.html" method="get">
+        <table>
+          <tr>
+            <td><br />Username:</td>
+            <td>
+              <br /><input type="text" name="UserName" placeholder="username" />
+            </td>
+            <!-- Add placeholder and required attributes -->
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input type="password" name="name" placeholder="password" />
+            </td>
+            <!-- Add placeholder and required attributes -->
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              Male<input type="radio" name="user_gender" value="M" />&nbsp;
+              Female<input type="radio" name="user_gender" value="F" />
+            </td>
+          </tr>
+          <tr>
+            <td>DOB:</td>
+            <td><input type="date" name="user_date" required /></td>
+            <!-- Add required attribute -->
+          </tr>
+          <tr>
+            <td>Phone number:</td>
+            <td>
+              <input
+                type="text"
+                name="phone"
+                placeholder="2313222323"
+                required
+                pattern="+ [0-9]{12}" /><br /><br />
+            </td>
+            <!-- Add placeholder, pattern and required attributes -->
+          </tr>
+          <tr>
+            <td>Email ID:</td>
+            <td>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="mail@mail.com"
+                required />
+            </td>
+            <!-- Add placeholder and required attributes -->
+          </tr>
+          <tr>
+            <td><br />Languages Known:</td>
+            <td>
+              <br /><input
+                type="checkbox"
+                name="Langauges"
+                value="English"
+                checked="checked" />English
+              <input type="checkbox" name="Langauges" value="Hindi" /> Hindi
+              <input type="checkbox" name="Langauges" value="French" /> French
+            </td>
+          </tr>
+          <tr>
+            <td><br />Profile pic:</td>
+            <td><br /><input type="file" required /></td>
+            <!-- Add required attribute -->
+          </tr>
+          <tr>
+            <td><br /><br /><input type="submit" value="Register" /></td>
+            <td><br /><br /><input type="reset" value="Reset" /></td>
+          </tr>
+        </table>
+      </form>
+      <br />
+      <br />
+      <br />
+      <br />
+    </article>
+    <footer>
+      <nav>
+        About Us | Privacy Policy | Contact Us | FAQ | Terms & Conditions
+      </nav>
+      Copyright &copy; 2018 | Giri
+    </footer>
+
+    <aside>Like and Connect with us FB Twitter g+</aside>
+  </body>
+</html>
