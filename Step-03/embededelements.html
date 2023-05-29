@@ -9,10 +9,6 @@
       html {
         font-size: 1.2rem;
       }
-      body {
-        background-color: #333;
-        color: beige;
-      }
     </style>
   </head>
   <body>
@@ -40,18 +36,61 @@
         </ul>
       </section>
     </article>
-    <h2>Image Tag</h2>
-    <p>
-      Embedding images to a web page can be done with the &lt;img
-      &gt;...&lt;/img &gt; tag. The &lt;img &gt; tag has attributes 'src' and
-      'alt' where src defines the location of the image and alt defines the
-      alternative text if it is failed to load the image inside the web page
-    </p>
-    <figure>
-      <img
-        src="https://images.unsplash.com/photo-1684242598938-554af99784c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQxfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-        alt="image unavailable" />
-      <figcaption>A colorful tropical sea view</figcaption>
-    </figure>
+    <div>
+      <h2>Image Tag</h2>
+      <p>
+        Embedding images to a web page can be done with the &lt;img
+        &gt;...&lt;/img &gt; tag. The &lt;img &gt; tag has attributes 'src' and
+        'alt' where src defines the location of the image and alt defines the
+        alternative text if it is failed to load the image inside the web page
+      </p>
+      <figure>
+        <img
+          src="tropicalSea.jpg"
+          alt="image unavailable"
+          width="400px"
+          height="341px" />
+        <figcaption>A colorful tropical sea view</figcaption>
+      </figure>
+    </div>
+    <div>
+      <h3>Audio Element</h3>
+      <p>Listen Music</p>
+      <br />
+      <audio src="music.mp3" controls="controls" type="audio/mp3">
+        Your browser does not support audio tag
+      </audio>
+      <br /><br />
+      <video
+        src="seaView.mp4"
+        controls="controls"
+        width="350"
+        height="250"></video>
+    </div>
+
+    <div>
+      <h2>Use of iframe</h2>
+      <a href="tropicalSea.jpg" target="myframe">Click Here</a>
+      <iframe name="myframe" width="350" height="250"></iframe>
+      <br /><br />
+      <h2>Try out 2</h2>
+      <iframe
+        src="https://pixabay.com/music/acoustic-group-leva-eternity-149473/"
+        width="1000"
+        height="1000"></iframe>
+      <br /><br />
+      <p>
+        This demo loads the target of hyperlink into the same web page using
+        iframe
+      </p>
+      <a href="https://www.google.com" target="myFrame">
+        Click here to load webpage content into iframe.
+      </a>
+      <iframe
+        name="myFrame"
+        width="600"
+        height="400"
+        sandbox="allow-same-origin"></iframe>
+    </div>
   </body>
 </html>
