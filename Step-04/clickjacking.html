@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content-security-policy="policy" />
     <style>
       html {
         font-size: 1.5rem;
@@ -121,6 +122,40 @@
     </div>
     <div>
       <h2>Content-Security-Policy (CSP):</h2>
+      <p>
+        Content Security Policy is a standard to mitigate and detect numerous
+        content injection attacks. It is an HTTP response header that provides
+        different directives that are used to limit how and from where content
+        can be loaded into a web application. A browser that is compatible with
+        CSP will execute only the scripts mentioned in the allowed list of
+        domains.
+      </p>
+      <pre>
+        To configure Content Security Policy, we need to set the "Content-Security-Policy" 
+        response header or in the "&lt;meta&gt;" tag of HTML. Set the values to control 
+        the resources that the browser is allowed to load for that particular page.
+        <b>Content-Security-Policy: policy</b> 
+      </pre>
+      <h3>
+        The policy can be set using different directives that define the policy
+        for a certain resource type. One of the directives "frame-ancestors" can
+        be set to protect against clickjacking which denotes if a browser should
+        be allowed to embed a page in an &lt;frame&gt; or &lt;iframe&gt;.
+      </h3>
+      <pre>
+        Content-Security-Policy: frame-ancestors 'none'
+      </pre>
+      <h3>This doesn't allow any domain to embed a web page in a frame.</h3>
+      <p>Content-Security-Policy: frame-ancestors 'self'</p>
+      <h3>This allows only the current page to be embedded inside a frame.</h3>
+      <p>
+        Content-Security-Policy: frame-ancestors 'self' '\*.example.com'
+        'https://mywebsite.com';
+      </p>
+      <h2>
+        Note: If there is a requirement to use an iframe in the application,
+        then use the sandbox attribute to prevent clickjacking.
+      </h2>
     </div>
   </body>
 </html>
