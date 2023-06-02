@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage Vulnerablities</title>
+  </head>
+  <body>
+    <div>
+      <h1>Data Storage on Clinet side is Vulnerable</h1>
+      <p>
+        Often we store some data on client browser cache. if not properly stoted
+        said data may be steal
+      </p>
+      <h3>
+        HTML5 has introduced webstorage or offline storeage as local Storage and
+        Session Storage
+      </h3>
+      <p>
+        Local storage holds the data in the browser cache until the user deletes
+        it or it expires based on the expiry date given. setItem() method is
+        used to assign data to local storage. The below code creates three items
+        with names bgcolor, textcolor, fontsize and assigns the values to them.
+      </p>
+      <p>
+        localStorage.setItem("bgcolor",
+        document.getElementById("bgcolor").value);
+        localStorage.setItem("textcolor",
+        document.getElementById("textcolor").value);
+        localStorage.setItem("fontsize",
+        document.getElementById("fontsize").value);
+      </p>
+      <h3>
+        getItem() method is used to fetch values from local storage. Below is
+        the code to retrieve values from localStorage
+      </h3>
+      <p>
+        document.getElementById("page").style.backgroundColor =
+        localStorage.getItem("bgcolor");
+        document.getElementById("page").style.color =
+        localStorage.getItem("textcolor");
+        document.getElementById("page").style.fontSize =
+        localStorage.getItem("fontsize");
+      </p>
+      <h3>User can view the local storage data by using F12</h3>
+      <h2>Mittigation Techniques</h2>
+      <ul>
+        <li>Never store sensitive information on client side</li>
+        <li>
+          Use cookies with the 'httponly' flag to protect the data at the cline
+          side
+        </li>
+      </ul>
+      <h3>
+        A cookie is a piece of data that is stored in the user's browser. It can
+        store a maximum of 4 KB of data in the browser. Data in cookies are
+        stored as key-value pairs
+      </h3>
+      <p>
+        Example Code is userName=Smith; expires=Mon, 15 Oct 2018 23:00:00 GMT;
+        key: userName value: Smith expires: Mon, 15 Oct 2018 23:00:00 GMT; path:
+        \
+      </p>
+      <h3>To create a cookie we can use document.cookie property.</h3>
+      <p>document.cookie = cookieValue;</p>
+      <p>
+        cookieValue is a string in key-value pairs. For example, a cookie to
+        store username and password can be created as below
+      </p>
+      <p>document.cookie = "username = Smith;password = secret";</p>
+      <p>
+        In the above code snippet username and password are keys, Smith and
+        secret are their corresponding values. Below is the syntax of setting a
+        cookie in the HTTP response header
+      </p>
+      <p>&lt;Set-Cookie: <name>=<value>[;<Max-Age>=<age>][;expires=<date>][;domain=<domain_name>][;path=<some_path>][;secure][;HttpOnly]&gt; </p>
+    </div>
+  </body>
+</html>

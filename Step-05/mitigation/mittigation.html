@@ -53,7 +53,7 @@
         var str =
           "Review submitted for Book " + document.getElementById("name").value;
         var clean = DOMPurify.sanitize(str);
-        document.getElementById("content").innerHTML = str;
+        document.getElementById("content").innerHTML = clean;
       }
     </script>
   </body>
