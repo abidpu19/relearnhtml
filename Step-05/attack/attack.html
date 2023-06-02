@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Attributes Attacks</title>
+  </head>
+  <body>
+    <h1 id="heading">Welcome to Learning HTML Attributes Attacks</h1>
+    <br />
+    <div id="container">
+      <h2 id="title">
+        <u>Submit Review</u>
+      </h2>
+      <br />
+      <div id="reviewBox">
+        <label for="" style="font-weight: bold">Book Name:</label>
+        <br />
+        <textarea name="name" id="name" cols="110" rows="1"></textarea>
+        <br />
+        <label for="" style="font-weight: bold">
+          Summarize your experience in a few words</label
+        >
+        <br />
+        <textarea name="review" id="review" cols="110" rows="5"></textarea>
+        <br />
+        <button onclick="submitReview()">submit</button>
+        <p id="content"></p>
+      </div>
+    </div>
+
+    <hr />
+    <footer>
+      <p>
+        HTML Attacks Prevention
+        <span> &copy; 2019</span>
+      </p>
+      <p>
+        <u>Contact Us:</u>
+      </p>
+      <p>Mail Id: htmlattacks@work.com</p>
+      <p id="footer">
+        ** Disclaimer: This demo is only for Educational purpose. Please do not
+        try this attack on any commercial website **
+      </p>
+    </footer>
+
+    <script>
+      function submitReview() {
+        var str =
+          "Review submitted for Book " + document.getElementById("name").value;
+        document.getElementById("content").innerHTML = str;
+      }
+    </script>
+  </body>
+</html>

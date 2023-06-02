@@ -5,13 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML5 Attributes & Events Vulnerabilities</title>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Gilroy";
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        font-size: 1.2rem;
+      }
+      #main {
+        padding: 3vw;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <p>
-      HTML5 has few tags, attributes, and events that are prone to different
-      attacks as they can execute Javascript code. These will be vulnerable to
-      XSS and CSRF attacks
-    </p>
-    
+    <div id="main">
+      <p>
+        HTML5 has few tags, attributes, and events that are prone to different
+        attacks as they can execute Javascript code. These will be vulnerable to
+        XSS and CSRF attacks
+      </p>
+      <h2>Examples of attacks</h2>
+      <ul>
+        <li>Malicious script injcted through form action attribute</li>
+        <li>
+          &lt; form id="myform"&gt; &lt; button form="myform"
+          formaction="javascript.alert(2)" &gt; Submit &lt; /button &gt; &lt;
+          /form &gt;
+        </li>
+        <li>
+          demo
+          <form id="myform" />
+          <button form="myform" formaction="javascript:alert(2)">Submit</button>
+        </li>
+        <li><h3>Malicious script injuction via onfocus event</h3></li>
+        <li>
+          demo &lt;input type="text" autofocus onfocus="alert('hacked')" /&gt;
+        </li>
+        <li>Malicious script injucted via an error event in video-tag</li>
+        <li>
+          Demo Code &lt;video
+          src="/apis/authContent/content-store/Infosys/Infosys_Ltd/Public/lex_auth_012782317766025216289/web-hosted/assets/temp.mp3"
+          onerror="alert('hacked')"&gt;&lt;/video&gt;
+        </li>
+      </ul>
+      <h2>Mitigation</h2>
+      <p>
+        To defened against these attacks we should HMTL sanitization as a
+        mitigation
+      </p>
+      <h3>
+        HTML sanitization provide protection from a few Vulnerabilities like XSS
+        (cross-site scripting)
+      </h3>
+      <p>
+        The tags such as &lt;b&gt; &lt;i&gt; &lt;u&gt; &lt;em&gt; &lt;strong&gt;
+        are allowed and sanitization process remove tags like &lt;script&gt;,
+        &lt;embed&gt;,&lt;object&gt;,&lt;link&gt;
+      </p>
+      <!-- <p><a href="#" onmouseover="alert('hacked')">Avengers</a></p> -->
+      <p>
+        &lt;a href="#" onmouseover="alert('hacked')"&gt; Avengers &lt;/a&gt;
+      </p>
+      <h2>HTML sanitization libraries</h2>
+      <ol>
+        <li>Dompurify</li>
+        <li>XSS</li>
+        <li>XSS-Filter</li>
+      </ol>
+      <h2>Dompurify</h2>
+      <p>
+        Used for sanitizing HTML code. Writtin in Javascirpt and works in all
+        modern browsers. the library strip out dangerous HTML and prevent XSS
+        attack
+      </p>
+      <p>to use library in website simple steps</p>
+      <pre>
+&lt;script type="text/javascript" src="dist/purify.min.js"&gt;&lt;/script&gt;
+</pre
+      >
+      <h3>Any dirty code can be cleaned up using following code snipt</h3>
+      <p>var clean = DOMPurify.sanitize(dirty);</p>
+    </div>
   </body>
 </html>
