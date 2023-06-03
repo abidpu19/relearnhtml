@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>OnlineBooks</title>
+  </head>
+
+  <body id="page">
+    <h1 id="heading">Welcome to OnlineBooks</h1>
+    <div id="search">
+      <form method="GET" action="details.html">
+        <input type="text" placeholder="Search for a book" name="book" />
+        <button type="submit">
+          <i class="fa fa-search"> </i>
+        </button>
+      </form>
+    </div>
+    <br />
+    <div id="container">
+      <h2 id="title">
+        <u>About OnlineBooks</u>
+      </h2>
+      <br />
+      <p>
+        OnlineBooks provides you the trendy updates and reviews of latest Books.
+        You can register with us to get the feed in your mail.
+        <br />
+        <button>Register</button>
+      </p>
+    </div>
+    <hr />
+    <footer>
+      <p>
+        OnlineBooks
+        <span> &copy; 2023</span>
+      </p>
+      <p>
+        <u>Contact Us:</u>
+      </p>
+      <p>Mail Id: OnlineBooks@edu.com</p>
+      <p id="footer">
+        ** disclaimer: This demo is only for Educational purpose. Please do not
+        try this attack on any commercial website **
+      </p>
+    </footer>
+
+    <!-- <script>
+      document.getElementById("page").style.backgroundColor =
+        localStorage.getItem("bgcolor");
+      document.getElementById("page").style.color =
+        localStorage.getItem("textcolor");
+      document.getElementById("page").style.fontSize =
+        localStorage.getItem("fontsize") + "px";
+    </script>
+    <script> -->
+    <script>
+      $.get("http://localhost:4000/send", function (data) {
+        $("#page").css("background-color", data.bgcolor);
+        $("#page").css("color", data.color);
+        $("#page").css("font-size", data.fontsize + "px");
+      });
+    </script>
+  </body>
+</html>

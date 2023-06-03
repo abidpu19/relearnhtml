@@ -1,0 +1,1 @@
+textcolor:red,fontsize:20,bgcolor:pink,length:null,clear:null,getItem:null,key:null,removeItem:null,setItem:null
