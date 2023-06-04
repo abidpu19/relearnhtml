@@ -21,5 +21,63 @@
       possible if the user URL has HTTPS, an attacker has to spoof only the site
       that is being linked to
     </p>
+    <h2>Example</h2>
+    <p>
+      Consider a message forum or a blog where an attacker can post his own
+      website link. If any user visits that link will be shown some information
+      but in the background that malicious website will redirect the parent
+      login page to a fake page that looks similar to the original login page.
+      When a user comes back to the message forum, they appear to be logged out.
+      Without thinking they will enter their credentials to log in as the page
+      looks similar to the original one. Now the attacker can get hold of that
+      authentication data. Now the user will be redirected to the message forum
+      page automatically so that they won't get a doubt that they have entered
+      credentials in a fake login page
+    </p>
+    <h1>Attack is possible in two scenarios</h1>
+    <ol>
+      <li>
+        If a website is using a hyperlink with a target attribute in which if
+        the user clicks that link the new page will be loaded in a new
+        window/tab keeping the current page opened in the original tab.
+        <a href="example.html" target="_blank">Click here to win a lottery</a>
+      </li>
+      <li>
+        If a website is using a window.open javascript function
+        <button onclick="window.open('example.html')">
+          Click here to win a lottery
+        </button>
+      </li>
+    </ol>
+    <h2>Reverse Tabnabbing Mitigation Techniques</h2>
+    <ul>
+      <li>
+        If a hyperlink is used with a target attribute, use the below attribute
+        <a href="example.com" target="_blank" rel="noopener noreferrer"
+          >Click here to win a lottery</a
+        >
+        <pre>
+            noopener option informs the browser not to make the opener object available to the linked website.
+             As this option is not supported by a few older browsers, we should also include 
+             the noreferrer option as well. The noreferrer option tells the browser not to make any referrer information available to the linked website.</pre
+        >
+      </li>
+      <li>
+        If we don't want to set opener and referrer options for every hyperlink,
+        we can set this as an HTTP header in all responses.
+        <b>Referrer-Policy: no-referrer</b>
+      </li>
+      <li>
+        If the window.open function is used, use 'noopener, noreferrer' in the
+        third parameter(windowfeatures) of it. <br />
+        <code>
+          function openWindow(url, name, options){ // Set opener and referrer
+          options var newWindow = window.open(null, name,
+          'noopener,noreferrer,'+options); //Reset the opener link
+          newWindow.opener = null; // Load the correct url newWindow.location =
+          url; }</code
+        >
+      </li>
+    </ul>
   </body>
 </html>
